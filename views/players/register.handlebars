@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+        <h2>Cadastrar Jogador</h2>
+    </div>
+    <div class="card-body">
+        <form action="/players/add" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <input type="number" class="form-control" id="rating" name="rating" value="1500">
+                <small class="text-muted">Valor padrão: 1500</small>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <a href="/players" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

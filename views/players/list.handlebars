@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Lista de Jogadores</h2>
+    <a href="/players/add" class="btn btn-success">Novo Jogador</a>
+</div>
+
+{{#if players}}
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Rating</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each players}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{rating}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td>
+                    <div class="d-flex gap-1">
+                        <a href="/players/edit/{{id}}" class="btn btn-sm btn-warning">Editar</a>
+                        <form action="/players/delete/{{id}}?_method=DELETE" method="POST"
+                            onsubmit="return confirm('Tem certeza que deseja excluir este jogador?');">
+                            <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+<div class="alert alert-info">Nenhum jogador cadastrado.</div>
+{{/if}}

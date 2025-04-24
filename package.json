@@ -1,0 +1,20 @@
+{
+  "name": "chess-tournament-organizer",
+  "version": "1.0.0",
+  "description": "Sistema para organização de torneios de xadrez usando o Sistema Suíço",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "connect-flash": "^0.1.1",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "firebase": "^11.6.0",
+    "method-override": "^3.0.0",
+    "uuid": "^11.1.0"
+  }
+}
